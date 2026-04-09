@@ -144,11 +144,23 @@ function App() {
     ])
 
   return (
-   <>
+   <main>
+       <section className="person-card-container">
+           <div className="person-details">
+            <img src='src/assets/image-jeremy.png' alt="Jeremy's avatar"/>
+            <p>Report for</p>
+            <p>Jeremy Robson</p>
+           </div>
+           <div className="time-periods">
+               <button type="button" className="time-period-btn">Daily</button>
+               <button type="button" className="time-period-btn">Weekly</button>
+               <button type="button" className="time-period-btn">Monthly</button>
+           </div>
+       </section>
        {categories.map(category => (
            <Category key={category.id} categoryDetails = {category} />
        ))}
-   </>
+   </main>
   )
 }
 
