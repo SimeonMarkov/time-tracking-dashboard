@@ -10,6 +10,7 @@ function App() {
             id: 'card-work-1',
             headingSrc: 'src/assets/icon-work.svg',
             categoryName: 'Work',
+            bannerBackgroundColor: '#fbaa76',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -32,6 +33,7 @@ function App() {
             id: 'card-play-1',
             headingSrc: 'src/assets/icon-play.svg',
             categoryName: 'Play',
+            bannerBackgroundColor: '#4EBBC5FF',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -54,6 +56,7 @@ function App() {
             id: 'card-study-1',
             headingSrc: 'src/assets/icon-study.svg',
             categoryName: 'Study',
+            bannerBackgroundColor: '#ff88a3',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -76,6 +79,7 @@ function App() {
             id: 'card-exercise-1',
             headingSrc: 'src/assets/icon-exercise.svg',
             categoryName: 'Exercise',
+            bannerBackgroundColor: '#71d691',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -98,6 +102,7 @@ function App() {
             id: 'card-social-1',
             headingSrc: 'src/assets/icon-social.svg',
             categoryName: 'Social',
+            bannerBackgroundColor: '#9c6bec',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -120,6 +125,7 @@ function App() {
             id: 'card-self-care-1',
             headingSrc: 'src/assets/icon-self-care.svg',
             categoryName: 'Self Care',
+            bannerBackgroundColor: '#e4cd87',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
