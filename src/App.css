@@ -31,7 +31,15 @@ main {
 .time-period-btn {
     display: block;
     background-color: #180a5a;
-    color: white;
+    color: #9b8ef1;
     border: none;
     padding: 1rem;
+}
+
+.time-period-btn.selected {
+    color: white;
+}
+
+.time-period-btn:hover {
+    cursor: pointer;
 }

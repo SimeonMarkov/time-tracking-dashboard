@@ -143,6 +143,10 @@ function App() {
         }
     ])
 
+    function switchTimeCategory(e) {
+        document.querySelector(".time-period-btn[class~='selected']").classList.remove('selected');
+        e.target.classList.add('selected');
+    }
   return (
    <main>
        <section className="person-card-container">
@@ -152,9 +156,9 @@ function App() {
             <p>Jeremy Robson</p>
            </div>
            <div className="time-periods">
-               <button type="button" className="time-period-btn">Daily</button>
-               <button type="button" className="time-period-btn">Weekly</button>
-               <button type="button" className="time-period-btn">Monthly</button>
+               <button type="button" className="time-period-btn selected" onClick={switchTimeCategory}>Daily</button>
+               <button type="button" className="time-period-btn" onClick={switchTimeCategory}>Weekly</button>
+               <button type="button" className="time-period-btn" onClick={switchTimeCategory}>Monthly</button>
            </div>
        </section>
        {categories.map(category => (
