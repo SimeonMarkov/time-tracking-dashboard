@@ -9,7 +9,7 @@ function App() {
         {
             id: 'card-work-1',
             headingSrc: 'src/assets/icon-work.svg',
-            categoryName: '',
+            categoryName: 'Work',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -31,6 +31,7 @@ function App() {
         {
             id: 'card-play-1',
             headingSrc: 'src/assets/icon-play.svg',
+            categoryName: 'Play',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -52,6 +53,7 @@ function App() {
         {
             id: 'card-study-1',
             headingSrc: 'src/assets/icon-study.svg',
+            categoryName: 'Study',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -73,6 +75,7 @@ function App() {
         {
             id: 'card-exercise-1',
             headingSrc: 'src/assets/icon-exercise.svg',
+            categoryName: 'Exercise',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -94,6 +97,7 @@ function App() {
         {
             id: 'card-social-1',
             headingSrc: 'src/assets/icon-social.svg',
+            categoryName: 'Social',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -115,6 +119,7 @@ function App() {
         {
             id: 'card-self-care-1',
             headingSrc: 'src/assets/icon-self-care.svg',
+            categoryName: 'Self Care',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
