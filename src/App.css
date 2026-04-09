@@ -67,10 +67,10 @@ section {
 
 .heading-banner {
     background-color: orange;
-    border-radius: 1rem 1rem 0 0;
+    /*border-radius: 1rem 1rem 0 0;*/
     position: relative;
-    height: 20px;
-    z-index: 1;
+    height: 40px;
+    z-index: 2;
 }
 
 .heading-banner img {
@@ -79,6 +79,24 @@ section {
     position: absolute;
     right: 5%;
     z-index: 2;
+}
+
+.category-container {
+    height: 20vh;
+    margin-block: 1rem;
+}
+
+.category-content {
+    padding: 2rem;
+    height: calc(100% - 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 3;
+    position: relative;
+    top: -0.8rem;
+    background-color: #180a5a;
+    border-radius: 1rem 1rem;
 }
 
 .category-details {

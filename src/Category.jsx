@@ -6,10 +6,14 @@ export function Category(props) {
             <div className="heading-banner">
                 <img src={props.categoryDetails.headingSrc} alt='picture'/>
             </div>
-            <div className="category-details">
-                <p>{props.categoryDetails.categoryName}</p>
-                <p>{props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).currentTimeSpent}hrs</p>
-                <p>{props.timePeriod === 'Weekly' ? 'Last week ' : props.timePeriod === 'Monthly' ? 'Last month' : 'Yesterday' } - {props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).previousTimeSpent}hrs</p>
+            <div className="category-content">
+                <div className="category-details">
+                    <p>{props.categoryDetails.categoryName}</p>
+                    <p>{props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).currentTimeSpent}hrs</p>
+                </div>
+                <div className="last-time">
+                    <p>{props.timePeriod === 'Weekly' ? 'Last week ' : props.timePeriod === 'Monthly' ? 'Last month' : 'Yesterday'} - {props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).previousTimeSpent}hrs</p>
+                </div>
             </div>
         </section>
     );
