@@ -1,18 +1,10 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import './App.css'
 import { Category } from "./Category.jsx";
+import { PersonDetails } from "./PersonDetails.jsx";
 
 function App() {
 
-    /*
-    *
-    * Report for
-    Jeremy Robson
-
-    Daily
-    Weekly
-    Monthly
-*/
     const categories = [
         {
             id: 'card-work-1',
@@ -143,29 +135,18 @@ function App() {
         }
     ]
 
-    const [selectedCategory, setSelectedCategory] = useState('Daily');
+    const [selectedPeriod, setSelectedPeriod] = useState('Daily');
 
-    function switchTimeCategory(e) {
+    function switchTimePeriod(e) {
         document.querySelector(".time-period-btn[class~='selected']").classList.remove('selected');
         e.target.classList.add('selected');
-        setSelectedCategory(e.target.innerText)
+        setSelectedPeriod(e.target.innerText)
     }
   return (
    <main>
-       <section className="person-card-container">
-           <div className="person-details">
-            <img src='src/assets/image-jeremy.png' alt="Jeremy's avatar"/>
-            <p>Report for</p>
-            <p>Jeremy Robson</p>
-           </div>
-           <div className="time-periods">
-               <button type="button" className="time-period-btn selected" onClick={switchTimeCategory}>Daily</button>
-               <button type="button" className="time-period-btn" onClick={switchTimeCategory}>Weekly</button>
-               <button type="button" className="time-period-btn" onClick={switchTimeCategory}>Monthly</button>
-           </div>
-       </section>
+       <PersonDetails switchTimePeriodFunction={switchTimePeriod}/>
        {categories.map(category => (
-           <Category key={category.id} categoryDetails={category} timePeriod={selectedCategory}/>
+           <Category key={category.id} categoryDetails={category} timePeriod={selectedPeriod}/>
        ))}
    </main>
   )
