@@ -13,24 +13,24 @@ function App() {
     Weekly
     Monthly
 */
-    const [categories, setCategories] = useState([
+    const categories = [
         {
             id: 'card-work-1',
             headingSrc: 'src/assets/icon-work.svg',
             categoryName: '',
             hoursSpentForTime: [
                 {
-                    timeUnit: 'hours',
+                    timeUnit: 'Daily',
                     currentTimeSpent: 5,
                     previousTimeSpent: 7
                 },
                 {
-                    timeUnit: 'weeks',
+                    timeUnit: 'Weekly',
                     currentTimeSpent: 32,
                     previousTimeSpent: 36
                 },
                 {
-                    timeUnit: 'months',
+                    timeUnit: 'Monthly',
                     currentTimeSpent: 103,
                     previousTimeSpent: 128
                 }
@@ -41,17 +41,17 @@ function App() {
             headingSrc: 'src/assets/icon-play.svg',
             hoursSpentForTime: [
                 {
-                    timeUnit: 'hours',
+                    timeUnit: 'Daily',
                     currentTimeSpent: 1,
                     previousTimeSpent: 2
                 },
                 {
-                    timeUnit: 'weeks',
+                    timeUnit: 'Weekly',
                     currentTimeSpent: 10,
                     previousTimeSpent: 8
                 },
                 {
-                    timeUnit: 'months',
+                    timeUnit: 'Monthly',
                     currentTimeSpent: 23,
                     previousTimeSpent: 29
                 }
@@ -62,17 +62,17 @@ function App() {
             headingSrc: 'src/assets/icon-study.svg',
             hoursSpentForTime: [
                 {
-                    timeUnit: 'hours',
+                    timeUnit: 'Daily',
                     currentTimeSpent: 0,
                     previousTimeSpent: 1
                 },
                 {
-                    timeUnit: 'weeks',
+                    timeUnit: 'Weekly',
                     currentTimeSpent: 4,
                     previousTimeSpent: 7
                 },
                 {
-                    timeUnit: 'months',
+                    timeUnit: 'Monthly',
                     currentTimeSpent: 13,
                     previousTimeSpent: 19
                 }
@@ -83,17 +83,17 @@ function App() {
             headingSrc: 'src/assets/icon-exercise.svg',
             hoursSpentForTime: [
                 {
-                    timeUnit: 'hours',
+                    timeUnit: 'Daily',
                     currentTimeSpent: 1,
                     previousTimeSpent: 1
                 },
                 {
-                    timeUnit: 'weeks',
+                    timeUnit: 'Weekly',
                     currentTimeSpent: 4,
                     previousTimeSpent:5
                 },
                 {
-                    timeUnit: 'months',
+                    timeUnit: 'Monthly',
                     currentTimeSpent: 11,
                     previousTimeSpent: 18
                 }
@@ -104,17 +104,17 @@ function App() {
             headingSrc: 'src/assets/icon-social.svg',
             hoursSpentForTime: [
                 {
-                    timeUnit: 'hours',
+                    timeUnit: 'Daily',
                     currentTimeSpent: 1,
                     previousTimeSpent: 1
                 },
                 {
-                    timeUnit: 'weeks',
+                    timeUnit: 'Weekly',
                     currentTimeSpent: 5,
                     previousTimeSpent: 10
                 },
                 {
-                    timeUnit: 'months',
+                    timeUnit: 'Monthly',
                     currentTimeSpent: 21,
                     previousTimeSpent: 23
                 }
@@ -125,27 +125,30 @@ function App() {
             headingSrc: 'src/assets/icon-self-care.svg',
             hoursSpentForTime: [
                 {
-                    timeUnit: 'hours',
+                    timeUnit: 'Daily',
                     currentTimeSpent: 0,
                     previousTimeSpent: 1
                 },
                 {
-                    timeUnit: 'weeks',
+                    timeUnit: 'Weekly',
                     currentTimeSpent: 2,
                     previousTimeSpent: 2
                 },
                 {
-                    timeUnit: 'months',
+                    timeUnit: 'Monthly',
                     currentTimeSpent: 7,
                     previousTimeSpent: 11
                 }
             ]
         }
-    ])
+    ]
+
+    const [selectedCategory, setSelectedCategory] = useState('Daily');
 
     function switchTimeCategory(e) {
         document.querySelector(".time-period-btn[class~='selected']").classList.remove('selected');
         e.target.classList.add('selected');
+        setSelectedCategory(e.target.innerText)
     }
   return (
    <main>
@@ -162,7 +165,7 @@ function App() {
            </div>
        </section>
        {categories.map(category => (
-           <Category key={category.id} categoryDetails = {category} />
+           <Category key={category.id} categoryDetails={category} timePeriod={selectedCategory}/>
        ))}
    </main>
   )

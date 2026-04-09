@@ -8,8 +8,8 @@ export function Category(props) {
             </div>
             <div>
                 <p>{props.categoryDetails.categoryName}</p>
-                <p>{props.categoryDetails.hoursSpentForTime.find(timePeriod => timePeriod.timeUnit === "weeks").currentTimeSpent}hrs</p>
-                <p>Last week - {props.categoryDetails.hoursSpentForTime.find(timePeriod => timePeriod.timeUnit === "weeks").previousTimeSpent}hrs</p>
+                <p>{props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).currentTimeSpent}hrs</p>
+                <p>Last week - {props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).previousTimeSpent}hrs</p>
             </div>
         </section>
     );
