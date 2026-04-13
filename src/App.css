@@ -1,11 +1,20 @@
 :root {
-    --primary-color: #c57b4e;
+    --orange_300: hsl(15, 100%, 70%);
+    --pink_400: hsl(348, 100%, 68%);
+    --green_400: hsl(145, 58%, 55%);
+    --purple_700: hsl(264, 64%, 52%);
+    --yellow_300: hsl(43, 84%, 65%);
+    --blue_300: hsl(195, 74%, 62%);
+    --purple_600: hsl(246, 80%, 60%);
+    --purple_500: hsl(237, 23%, 67%);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: calc((1rem * 18) / 16);
+    font-family: "Rubik", sans-serif;
 }
 
 body {
@@ -16,38 +25,62 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 80vw;
+    width: 90vw;
     margin-inline: auto;
 }
 
 .person-card-container {
     color: white;
     margin-block-start: 1rem;
+    height: 30vh;
 }
 
 .person-details {
-    background-color: #6745ff;
+    background-color: var(--purple_600);
+    height: 20vh;
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 0.2rem;
     padding: 0.5rem;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem;
+}
+
+.person-details div {
+    width: 10rem;
+}
+
+.person-details p:first-child {
+    font-family: Rubik, sans-serif;
+    font-weight: 300;
+    color: var(--purple_500);
+}
+
+.person-details p:last-child {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
 }
 
 .person-avatar {
     width: 4rem;
     height: 4rem;
-    border: 2px solid white;
+    border: 0.20rem solid white;
     border-radius: 50%;
+    margin-inline-start: 1rem;
 }
 
 .time-periods {
+    height: 12vh;
     background-color: #180a5a;
     border-radius: 0 0 1rem 1rem ;
     padding: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    top: -5%;
 }
 
 .time-period-btn {
@@ -120,9 +153,12 @@ section {
     gap: 1rem;
 }
 
+.last-time p {
+    color: var(--purple_500);
+}
+
 .last-time p:first-child {
     font-size: 3rem;
-    color: #bbb3f4;
     height: fit-content;
 }
 
@@ -130,4 +166,16 @@ section {
     background-color: #271c59;
     border-radius: 10%;
     cursor: pointer;
+}
+
+.attribution {
+    color: white;
+    margin-block-start: 5rem;
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.attribution a {
+    color: white;
 }
