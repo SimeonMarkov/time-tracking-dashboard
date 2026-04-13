@@ -7,6 +7,7 @@
     --blue_300: hsl(195, 74%, 62%);
     --purple_600: hsl(246, 80%, 60%);
     --purple_500: hsl(237, 23%, 67%);
+    --purple_blackish: hsl(244, 64%, 26%);
 }
 
 * {
@@ -71,7 +72,7 @@ main {
 }
 
 .time-periods {
-    height: 12vh;
+    height: 10vh;
     background-color: #180a5a;
     border-radius: 0 0 1rem 1rem ;
     padding: 1rem;
@@ -102,72 +103,6 @@ section {
     border-radius: 1rem;
 }
 
-.heading-banner {
-    border-radius: 1rem 1rem 0 0;
-    position: relative;
-    height: 40px;
-    z-index: 2;
-}
-
-.heading-banner img {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 5%;
-    z-index: 2;
-}
-
-.category-container {
-    height: 20vh;
-    margin-block: 1rem;
-}
-
-.category-content {
-    padding: 2rem;
-    height: calc(100% - 20px);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    z-index: 3;
-    position: relative;
-    top: -0.8rem;
-    background-color: #180a5a;
-    border-radius: 1rem 1rem;
-}
-
-.category-details {
-    position: relative;
-    z-index: 3;
-    background-color: #180a5a;
-}
-
-.category-details p:first-child {
-    border-radius: 1rem 1rem 0 0;
-}
-
-.last-time {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.last-time p {
-    color: var(--purple_500);
-}
-
-.last-time p:first-child {
-    font-size: 3rem;
-    height: fit-content;
-}
-
-.last-time p:first-child:hover {
-    background-color: #271c59;
-    border-radius: 10%;
-    cursor: pointer;
-}
-
 .attribution {
     color: white;
     margin-block-start: 5rem;
@@ -178,4 +113,71 @@ section {
 
 .attribution a {
     color: white;
+}
+
+@media screen and (min-width: 42rem) , (orientation : landscape) {
+    main {
+        min-width: 53rem;
+        width: 50vw;
+        min-height: 50vh;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        margin-block-start: 5rem;
+    }
+
+    .person-card-container {
+        height: calc(100% + 1.5rem);
+        grid-row: 1 / span 2;
+        margin: 0;
+    }
+
+    .time-periods {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 34%;
+    }
+
+    .time-period-btn {
+        font-size: 0.7rem;
+        padding-block: 0.5rem;
+    }
+
+    .person-details {
+        height: 66% ;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .person-details div {
+        display: flex;
+        flex-direction: column;
+        margin-block-end: 5rem;
+        padding-inline-start: 1rem;
+    }
+
+    .person-details p:first-child {
+        font-weight: 400;
+        font-size: 0.6rem;
+    }
+
+
+    .person-details p:last-child {
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    .category-content:hover {
+        background-color: var(--purple_blackish);
+        cursor: pointer;
+    }
+
+    .category-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
 }
