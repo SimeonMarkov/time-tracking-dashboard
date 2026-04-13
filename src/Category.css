@@ -1,5 +1,6 @@
 .category-container {
     color: white;
+    margin-block: 1rem;
 }
 
 .heading-banner {
@@ -15,10 +16,6 @@
     position: absolute;
     right: 7%;
     z-index: 2;
-}
-
-.category-container {
-    margin-block: 1rem;
 }
 
 .category-content {
@@ -55,12 +52,7 @@
     color: var(--purple_500);
 }
 
-.last-time p:first-child {
-    font-size: 3rem;
-    height: fit-content;
-}
-
-.last-time p:first-child:hover {
+.more-options-btn:hover {
     background-color: var(--purple_700);
     border-radius: 10%;
     cursor: pointer;
@@ -80,7 +72,7 @@
     }
 
     .last-time p {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     .more-options-btn {

@@ -8,6 +8,7 @@
     --purple_600: hsl(246, 80%, 60%);
     --purple_500: hsl(237, 23%, 67%);
     --purple_blackish: hsl(244, 64%, 26%);
+    --megadark_blue: #0e0733;
 }
 
 * {
@@ -19,7 +20,7 @@
 }
 
 body {
-    background-color: #0e0733;
+    background-color: var(--megadark_blue);
 }
 
 main {
@@ -73,7 +74,7 @@ main {
 
 .time-periods {
     height: 10vh;
-    background-color: #180a5a;
+    background-color: var(--purple_blackish);
     border-radius: 0 0 1rem 1rem ;
     padding: 1rem;
     display: flex;
@@ -85,8 +86,8 @@ main {
 }
 
 .time-period-btn {
-    background-color: #180a5a;
-    color: #9b8ef1;
+    background-color: var(--purple_blackish);
+    color: var(--purple_500);
     border: none;
     padding: 1rem;
 }
@@ -171,7 +172,7 @@ section {
     }
 
     .category-content:hover {
-        background-color: var(--purple_700);
+        background-color: var(--purple_600);
         cursor: pointer;
     }
 
