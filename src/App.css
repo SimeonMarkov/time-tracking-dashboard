@@ -119,7 +119,7 @@ section {
 
 @media screen and (min-width: 42rem) , (orientation : landscape) {
     main {
-        min-width: 53rem;
+        min-width: 60rem;
         width: 50vw;
         min-height: 50vh;
         display: grid;
