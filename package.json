@@ -2,7 +2,7 @@
   "name": "time-tracking-dashboard",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/SimeonMarkov/time-tracking-dashboard",
+  "homepage": "https://simeonmarkov.github.io/time-tracking-dashboard",
   "type": "module",
   "scripts": {
     "dev": "vite",
