@@ -4,7 +4,7 @@ export function Category(props) {
     return (
         <section className="category-container">
             <div className="heading-banner" style={{backgroundColor: `${props.categoryDetails.bannerBackgroundColor}`}}>
-                <img src={props.categoryDetails.headingSrc} alt='picture'/>
+                <img src={`${import.meta.env.BASE_URL}/${props.categoryDetails.headingSrc}`} alt='picture'/>
             </div>
             <div className="category-content">
                 <div className="category-details">
