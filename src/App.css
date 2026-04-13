@@ -96,6 +96,7 @@ main {
 }
 
 .time-period-btn:hover {
+    color: var(--yellow_300);
     cursor: pointer;
 }
 
@@ -123,7 +124,7 @@ section {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(4, 1fr);
-        margin-block-start: 10rem;
+        margin-block-start: 15rem;
     }
 
     .person-card-container {
@@ -140,7 +141,7 @@ section {
     }
 
     .time-period-btn {
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding-block: 0.5rem;
     }
 
@@ -170,7 +171,7 @@ section {
     }
 
     .category-content:hover {
-        background-color: var(--purple_blackish);
+        background-color: var(--purple_700);
         cursor: pointer;
     }
 

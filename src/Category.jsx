@@ -12,7 +12,7 @@ export function Category(props) {
                     <p>{props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).currentTimeSpent}hrs</p>
                 </div>
                 <div className="last-time">
-                    <p>...</p>
+                    <img className="more-options-btn" src={`${import.meta.env.BASE_URL}/assets/icon-ellipsis.svg`} alt="More options icon"/>
                     <p>{props.timePeriod === 'Weekly' ? 'Last week ' : props.timePeriod === 'Monthly' ? 'Last month' : 'Yesterday'} - {props.categoryDetails.hoursSpentForTime.find(period => period.timeUnit === props.timePeriod).previousTimeSpent}hrs</p>
                 </div>
             </div>

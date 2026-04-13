@@ -1,12 +1,11 @@
 .category-container {
-    background-color: #180a5a;
     color: white;
 }
 
 .heading-banner {
     border-radius: 1rem 1rem 0 0;
     position: relative;
-    height: 2.5rem;
+    height: 2.8rem;
     z-index: 2;
 }
 
@@ -14,7 +13,7 @@
     width: 3rem;
     height: 3rem;
     position: absolute;
-    right: 5%;
+    right: 7%;
     z-index: 2;
 }
 
@@ -24,14 +23,14 @@
 
 .category-content {
     padding: 2rem;
-    height: calc(100% - 1.25rem);
+    height: calc(100% - 2.5rem);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     z-index: 3;
     position: relative;
-    top: -0.8rem;
-    background-color: #180a5a;
+    top: -0.6rem;
+    background-color: var(--purple_blackish);
     border-radius: 1rem 1rem;
 }
 
@@ -62,7 +61,7 @@
 }
 
 .last-time p:first-child:hover {
-    background-color: #271c59;
+    background-color: var(--purple_700);
     border-radius: 10%;
     cursor: pointer;
 }
@@ -84,10 +83,10 @@
         font-size: 0.7rem;
     }
 
-    .last-time p:first-child {
+    .more-options-btn {
         font-size: 1.2rem;
         position: absolute;
-        top: 1rem;
+        top: 2rem;
         right: 1rem;
     }
 
