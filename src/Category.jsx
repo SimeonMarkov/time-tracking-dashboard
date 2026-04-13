@@ -3,7 +3,7 @@ import './Category.css'
 export function Category(props) {
     return (
         <section className="category-container">
-            <div className="heading-banner" style={{backgroundColor: `${props.categoryDetails.bannerBackgroundColor}`}}>
+            <div className="heading-banner" style={{backgroundColor: `var(--${props.categoryDetails.bannerBackgroundColor})`}}>
                 <img src={`${import.meta.env.BASE_URL}/${props.categoryDetails.headingSrc}`} alt='picture'/>
             </div>
             <div className="category-content">

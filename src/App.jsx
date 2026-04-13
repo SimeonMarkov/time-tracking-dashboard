@@ -10,7 +10,7 @@ function App() {
             id: 'card-work-1',
             headingSrc: 'assets/icon-work.svg',
             categoryName: 'Work',
-            bannerBackgroundColor: '#fbaa76',
+            bannerBackgroundColor: 'orange_300',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -33,7 +33,7 @@ function App() {
             id: 'card-play-1',
             headingSrc: 'assets/icon-play.svg',
             categoryName: 'Play',
-            bannerBackgroundColor: '#4EBBC5FF',
+            bannerBackgroundColor: 'blue_300',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -56,7 +56,7 @@ function App() {
             id: 'card-study-1',
             headingSrc: 'assets/icon-study.svg',
             categoryName: 'Study',
-            bannerBackgroundColor: '#ff88a3',
+            bannerBackgroundColor: 'pink_400',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -79,7 +79,7 @@ function App() {
             id: 'card-exercise-1',
             headingSrc: 'assets/icon-exercise.svg',
             categoryName: 'Exercise',
-            bannerBackgroundColor: '#71d691',
+            bannerBackgroundColor: 'green_400',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -102,7 +102,7 @@ function App() {
             id: 'card-social-1',
             headingSrc: 'assets/icon-social.svg',
             categoryName: 'Social',
-            bannerBackgroundColor: '#9c6bec',
+            bannerBackgroundColor: 'purple_700',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
@@ -125,7 +125,7 @@ function App() {
             id: 'card-self-care-1',
             headingSrc: 'assets/icon-self-care.svg',
             categoryName: 'Self Care',
-            bannerBackgroundColor: '#e4cd87',
+            bannerBackgroundColor: 'yellow_300',
             hoursSpentForTime: [
                 {
                     timeUnit: 'Daily',
